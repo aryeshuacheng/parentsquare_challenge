@@ -6,9 +6,9 @@ class MessagesController < ApplicationController
   def hit_api
     # Send JSON to the API
     # Let's simulate load balancing!
-    random = rand(100)
+    random = rand(99)
 
-    if random <= 70
+    if random <= 29
       uri = URI('https://jo3kcwlvke.execute-api.us-west-2.amazonaws.com/dev/provider1')
     else
       uri = URI('https://jo3kcwlvke.execute-api.us-west-2.amazonaws.com/dev/provider2')
