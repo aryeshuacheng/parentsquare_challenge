@@ -11,7 +11,8 @@ class HitApiJob < ApplicationJob
     res = Net::HTTP.start(provider[:uri].hostname, provider[:uri].port, :use_ssl => provider[:uri].scheme == 'https') do |http|
       http.request(req)
     end
-    
+
+    # Possibly get rid of this begin/rescue statement
     begin
       message_id = JSON.parse(res.body)['message_id']
     rescue

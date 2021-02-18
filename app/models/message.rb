@@ -19,7 +19,7 @@ class Message < ApplicationRecord
     end
   end
 
-  def self.choose_provider(retry_flag: false)
+  def self.choose_provider
     random = rand(99)
 
     if random <= 29
