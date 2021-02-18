@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_02_17_000000) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "message_id"
     t.string "status"
+    t.string "internal_status"
   end
 
 end
